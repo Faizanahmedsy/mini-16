@@ -1,6 +1,18 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Sidebar } from "@/components/modules";
+
+import {
+  Boxes,
+  LayoutDashboard,
+  LifeBuoy,
+  Package,
+  Receipt,
+  Settings,
+  UserCircle,
+} from "lucide-react";
+import { SidebarItem } from "@/components/modules/sidebar/sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +28,44 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Sidebar
+          links={[
+            {
+              text: "Dashboard",
+              href: "/",
+              icon: <LayoutDashboard size={20} />,
+              active: true,
+            },
+            {
+              text: "Users",
+              href: "/users",
+              icon: <UserCircle size={20} />,
+            },
+            // {
+            //   title: "Ordrs",
+            //   href: "/orders",
+            //   icon: ShoppingCart,
+            //   variant: "ghost",
+            // },
+            // {
+            //   title: "Settings",
+            //   href: "/settings",
+            //   icon: Settings,
+            //   variant: "ghost",
+            // },
+          ]}
+        />
+          {/* <SidebarItem icon={<LayoutDashboard size={20} />} text="Home" alert />
+          <SidebarItem icon={<UserCircle size={20} />} text="Users" />
+          <SidebarItem icon={<Boxes size={20} />} text="Inventory" alert />
+          <SidebarItem icon={<Package size={20} />} text="Orders" alert />
+          <SidebarItem icon={<Receipt size={20} />} text="Billing" alert />
+          <SidebarItem icon={<Settings size={20} />} text="Setting" alert />
+          <SidebarItem icon={<LifeBuoy size={20} />} text="Help" alert /> */}
+        </Sidebar>
+        <main className="pl-[200px] h-full">{children}</main>
+      </body>
     </html>
   );
 }
