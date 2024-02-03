@@ -17,8 +17,18 @@ interface Route {
 
 const routes: Route[] = [
   {
-    text: "Dashboard",
+    text: "Home",
     href: "/",
+    icon: <LayoutDashboard size={20} />,
+  },
+  {
+    text: "Reducer",
+    href: "/reducer",
+    icon: <LayoutDashboard size={20} />,
+  },
+  {
+    text: "Zustland",
+    href: "/zustland",
     icon: <LayoutDashboard size={20} />,
   },
   {
