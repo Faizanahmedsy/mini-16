@@ -37,8 +37,8 @@ const routes: Route[] = [
     icon: <UserCircle size={20} />,
   },
   {
-    text: "Inventory",
-    href: "/inventory",
+    text: "Todos Table",
+    href: "/todos",
     icon: <Boxes size={20} />,
   },
   {
