@@ -26,8 +26,6 @@ export default function Sidebar({
 
   const pathname = usePathname();
 
-  console.log("pathname", pathname);
-
   return (
     <aside
       className={cn("h-screen fixed left-0", expanded ? "w-[200px]" : "w-16")}
@@ -119,8 +117,6 @@ export function SidebarItem({
   href?: string;
 }) {
   const { expanded } = useContext(SidebarContext);
-
-  console.log("href", href);
 
   return (
     // <Link href={}>

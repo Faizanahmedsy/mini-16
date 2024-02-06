@@ -37,7 +37,7 @@ const routes: Route[] = [
     icon: <UserCircle size={20} />,
   },
   {
-    text: "Todos Table",
+    text: "Tanstack Query",
     href: "/todos",
     icon: <Boxes size={20} />,
   },
